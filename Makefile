@@ -6,7 +6,13 @@
 #    By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/23 14:39:41 by miduarte          #+#    #+#              #
-#    Updated: 2025/05/23 14:39:42 by miduarte         ###   ########.fr        #
+#    Updated: 2025/05/28 10:46:43 by miduarte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+#include "push_swap.h"
+
+int main(int argc, char *argv[])
+{
+	
+}
