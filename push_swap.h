@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 14:39:23 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/28 11:30:29 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/05/28 11:44:59 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,11 @@ void rrr(t_stack *st);
 /*
  * best_friend.c (your existing routines)
  */
+
+/*
+ * parsing.c (your existing routines)
+ */
+bool parse_args(int argc, char **argv, t_stack *st);
+
 
 #endif
