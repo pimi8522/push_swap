@@ -6,11 +6,37 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 11:45:08 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/28 11:47:11 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/02 14:33:40 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void assign_indexes(t_stack *st)
+{
+    t_node *current;
+    t_node *min;
+    int     i, min_val, assigned;
+
+    for (i = 0; i < st->a_size; i++)
+    {
+        current = st->a;
+        min = NULL;
+        min_val = INT_MAX;
+        // Find unindexed min node in stack A
+        while (current)
+        {
+            if (current->index == -1 && current->value < min_val)
+            {
+                min_val = current->value;
+                min = current;
+            }
+            current = current->next;
+        }
+        if (min)
+            min->index = i;
+    }
+}
 
 /* Check that s is an optional '+'/'-' then at least one digit */
 static bool is_number(const char *s)

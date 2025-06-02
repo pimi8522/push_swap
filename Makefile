@@ -1,9 +1,21 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/06/02 14:34:23 by miduarte          #+#    #+#              #
+#    Updated: 2025/06/02 14:43:33 by miduarte         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = push_swap
 
 CC      = gcc
 CFLAGS  = -Wall -Wextra -Werror
 
-SRCS = main.c struct_utils.c sort.c best_friend.c parsing.c operators.c
+SRCS = main.c struct_utils.c small_sorts.c best_friend.c parsing.c operators.c
 OBJS = $(SRCS:.c=.o)
 
 LIBFT_DIR = ./libft
