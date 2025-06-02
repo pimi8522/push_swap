@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 10:45:55 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/28 12:08:19 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/02 12:35:37 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int main(int argc, char **argv)
     /* assign ranks and run best-friend sort */
     assign_indexes(st);
 	//sort
+	//depending on number of tings run small sorts
 
     free_state(st);
     return (0);
