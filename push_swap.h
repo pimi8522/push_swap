@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 14:39:23 by miduarte          #+#    #+#             */
-/*   Updated: 2025/05/28 11:44:59 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/02 10:51:28 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <limits.h>
 # include <stdbool.h>
 # include "./libft/libft.h"
+# include "./ft_printf/ft_printf.h"
 
 /*
  * A node in either stack
