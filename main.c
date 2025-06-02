@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 10:45:55 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/02 12:35:37 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/02 12:47:06 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int main(int argc, char **argv)
 {
     t_stack *st;
+	int size;
 
     /* nothing to do if no numbers passed */
     if (argc < 2)
@@ -35,8 +36,19 @@ int main(int argc, char **argv)
     assign_indexes(st);
 	//sort
 	//depending on number of tings run small sorts
+	size = st->a_size;
+    if (size == 2)
+        sort_two(st);
+    else if (size == 3)
+        sort_three(st);
+    else if (size == 4)
+        sort_four(st);
+    else if (size == 5)
+        sort_five(st);
+    else if (size > 5)
+        sort_big(st);
 
-    free_state(st);
+    free_stacks(st);
     return (0);
 }
 
