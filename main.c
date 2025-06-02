@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 10:45:55 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/02 12:47:06 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/02 14:30:52 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ int main(int argc, char **argv)
     if (argc < 2)
         return (0);
 		
-    st = init_stack();
+    st = init_stacks();
     if (!st)
         return (1);
 
     /* parse + validate; on error prints "Error\n" and returns false */
     if (!parse_args(argc, argv, st))
     {
-        free_stack(st);
+        free_stacks(st);
         return (1);
     }
 
