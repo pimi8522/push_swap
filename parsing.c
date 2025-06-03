@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 11:45:08 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/02 14:33:40 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/03 11:58:41 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ void assign_indexes(t_stack *st)
 {
     t_node *current;
     t_node *min;
-    int     i, min_val, assigned;
+    int     i, min_val;
 
-    for (i = 0; i < st->a_size; i++)
+	i = 0;
+    while (i < st->a_size)
     {
         current = st->a;
         min = NULL;
@@ -35,6 +36,7 @@ void assign_indexes(t_stack *st)
         }
         if (min)
             min->index = i;
+		i++;
     }
 }
 

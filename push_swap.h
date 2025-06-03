@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 14:39:23 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/02 15:03:19 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/02 15:13:20 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,11 +94,6 @@ void	rrr(t_stack *st);
  * ============================================================================
  */
 void assign_best_friends(t_stack *st);
-static int rotations_to_top(t_node *head, t_node *node);
-static void assign_costs(t_stack *st);
-static t_node *find_cheapest(t_stack *st);
-static void rotate_a_to_target(t_stack *st, t_node *target);
-static void rotate_b_to_top(t_stack *st, t_node *node);
 void sort_big(t_stack *st);
 
 /* ============================================================================
@@ -106,8 +101,6 @@ void sort_big(t_stack *st);
  * ============================================================================
  */
 bool	parse_args(int argc, char **argv, t_stack *st);
-bool	is_number(const char *s);
-bool	exists_in_stack(t_stack *st, int value);
 void assign_indexes(t_stack *st);
 
 /* ============================================================================

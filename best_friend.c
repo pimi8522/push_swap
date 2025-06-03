@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 11:30:14 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/02 12:45:16 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/02 15:11:59 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,6 @@ static void rotate_b_to_top(t_stack *st, t_node *node) {
 /* Main sorting routine for >5 elements */
 void sort_big(t_stack *st) {
     int pushed = 0;
-    int total = st->a_size;
 
     // Push all except 3 elements to B
     while (st->a_size > 3) {
