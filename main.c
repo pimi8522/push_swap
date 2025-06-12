@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 10:45:55 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/02 14:30:52 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/09 12:16:13 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int main(int argc, char **argv)
     st = init_stacks();
     if (!st)
         return (1);
-
     /* parse + validate; on error prints "Error\n" and returns false */
     if (!parse_args(argc, argv, st))
     {
@@ -53,6 +52,10 @@ int main(int argc, char **argv)
 }
 
 /*
+
+54 32 4 5 12 53
+
+6 4 1 2 3 5
 In the design sketched, the single t_stack *st you see in main() isn’t just “stack A” or “stack B” – it’s the entire program state. In my version, t_stack contains inside it:
 
     t_node *a; → head (top) of stack A

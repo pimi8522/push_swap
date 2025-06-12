@@ -6,7 +6,7 @@
 #    By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/02 14:34:23 by miduarte          #+#    #+#              #
-#    Updated: 2025/06/02 14:43:33 by miduarte         ###   ########.fr        #
+#    Updated: 2025/06/06 14:27:53 by miduarte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,12 +21,8 @@ OBJS = $(SRCS:.c=.o)
 LIBFT_DIR = ./libft
 LIBFT_A   = $(LIBFT_DIR)/libft.a
 
-PRINTF_DIR = ./ft_printf
-PRINTF_A   = $(PRINTF_DIR)/libftprintf.a
-
-INCLUDES = -I. -I$(LIBFT_DIR) -I$(PRINTF_DIR)
-LIBS = $(LIBFT_A) $(PRINTF_A)
-
+INCLUDES = -I. -I$(LIBFT_DIR)
+LIBS = $(LIBFT_A)
 BANNER = \
 "\033[1;35m"\
 "  _____           _        _____                       _____            _        \n"\
@@ -47,9 +43,6 @@ banner:
 $(LIBFT_A):
 	@$(MAKE) -C $(LIBFT_DIR)
 
-$(PRINTF_A):
-	@$(MAKE) -C $(PRINTF_DIR)
-
 $(NAME): $(LIBFT_A) $(PRINTF_A) $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(NAME) $(OBJS) $(LIBS)
 
@@ -59,12 +52,10 @@ $(NAME): $(LIBFT_A) $(PRINTF_A) $(OBJS)
 clean:
 	$(RM) $(OBJS)
 	$(MAKE) -C $(LIBFT_DIR) clean
-	$(MAKE) -C $(PRINTF_DIR) clean
 
 fclean: clean
 	$(RM) $(NAME)
 	$(MAKE) -C $(LIBFT_DIR) fclean
-	$(MAKE) -C $(PRINTF_DIR) fclean
 
 re: fclean all
 
