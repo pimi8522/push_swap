@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 10:45:55 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/16 10:48:14 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/16 12:17:49 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
         return (1);
     }
 
-    /* assign ranks and run best-friend sort */
+    /* assign ranks and run sort */
     assign_indexes(st);
 	//sort
 	//depending on number of tings run small sorts
@@ -45,7 +45,6 @@ int main(int argc, char **argv)
     else if (size == 5)
         sort_five(st);
     else if (size > 5)
-        //sort_bff(st);
         sort_radix(st);
 
     free_stacks(st);

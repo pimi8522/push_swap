@@ -51,6 +51,7 @@ t_node *node_new(int value)
         return NULL;
     n->value = value;
     n->index = 0;
+    n->index = -1;    // <— initialize to -1 so assign_indexes() can set it
     n->cost = 0;
     n->above_median = false;
     n->is_cheapest = false;
