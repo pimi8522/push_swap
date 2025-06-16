@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 14:20:01 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/16 14:32:52 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/16 14:58:01 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void assign_indexes(t_stack *st)
     }
 }
 
-static bool is_number(const char *s)
+bool is_number(const char *s)
 {
     if (*s == '+' || *s == '-')
         s++;
@@ -54,7 +54,7 @@ static bool is_number(const char *s)
     return (true);
 }
 
-static bool exists_in_stack(t_stack *st, int value)
+bool exists_in_stack(t_stack *st, int value)
 {
     t_node *curr = st->a;
     while (curr)

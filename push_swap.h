@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 14:39:23 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/16 14:50:02 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/16 14:58:31 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,9 +98,10 @@ void sort_radix(t_stack *st);
  * parsing.c
  * ============================================================================
  */
-void gauntlet(int argc, char **argv, t_stack *st);
 bool	parse_args(int argc, char **argv, t_stack *st);
 void assign_indexes(t_stack *st);
+bool    is_number(const char *s);
+bool    exists_in_stack(t_stack *st, int value);
 
 /* ============================================================================
  * small_sorts.c
