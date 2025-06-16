@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:14:59 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/02 12:33:57 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/16 14:37:49 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,15 +68,14 @@ void sort_four(t_stack *st)
 {
     int min_pos = find_min_position(st->a);
 
-    // Bring the smallest to the top
     while (min_pos > 0)
     {
         ra(st);
         min_pos--;
     }
-    pb(st);            // Push min to B
-    sort_three(st);    // Sort the 3 left in A
-    pa(st);            // Bring min back to A
+    pb(st);          
+    sort_three(st);    
+    pa(st);      
 }
 
 void sort_five(t_stack *st)
@@ -84,11 +83,9 @@ void sort_five(t_stack *st)
     int min_pos;
 	int i = 0;
 	
-    // Push two smallest elements to B
     while (i < 2)
     {
         min_pos = find_min_position(st->a);
-        // Bring the smallest to the top
         while (min_pos > 0)
         {
             ra(st);
@@ -97,7 +94,7 @@ void sort_five(t_stack *st)
         pb(st);
 		i++;
     }
-    sort_three(st);    // Sort the 3 left in A
-    pa(st);            // Bring back from B to A
+    sort_three(st);
+    pa(st); 
     pa(st);
 }

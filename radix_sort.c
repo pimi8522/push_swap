@@ -6,15 +6,12 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 10:46:17 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/16 11:10:12 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/16 14:09:50 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
- * Determine how many bits are needed to represent the largest index.
- */
 static int  get_max_bits(t_stack *st)
 {
     int     max_index;
@@ -35,10 +32,6 @@ static int  get_max_bits(t_stack *st)
     return (bits);
 }
 
-/*
- * sort_radix: for each bit (LSB → MSB), push 0-bits to B and rotate 1-bits in A,
- * then push everything back from B to A.
- */
 void    sort_radix(t_stack *st)
 {
     int i;

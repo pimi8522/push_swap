@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   struct_utils.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/16 14:38:13 by miduarte          #+#    #+#             */
+/*   Updated: 2025/06/16 14:38:14 by miduarte         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-/* Allocate and zero‐init your global state */
 t_stack *init_stacks(void)
 {
     t_stack *st = malloc(sizeof(*st));
@@ -18,7 +29,6 @@ t_stack *init_stacks(void)
     return st;
 }
 
-/* Free all nodes in both stacks, then the struct itself */
 void free_stacks(t_stack *st)
 {
     t_node *curr;
@@ -43,7 +53,6 @@ void free_stacks(t_stack *st)
     free(st);
 }
 
-/* Simple constructor for a single node */
 t_node *node_new(int value)
 {
     t_node *n = malloc(sizeof(*n));
@@ -51,7 +60,7 @@ t_node *node_new(int value)
         return NULL;
     n->value = value;
     n->index = 0;
-    n->index = -1;    // <— initialize to -1 so assign_indexes() can set it
+    n->index = -1;
     n->cost = 0;
     n->above_median = false;
     n->is_cheapest = false;
@@ -61,7 +70,6 @@ t_node *node_new(int value)
     return n;
 }
 
-/*–– Push/Pop at top/bottom of Stack A ––*/
 void push_a_top(t_stack *st, t_node *n)
 {
     if (!st || !n)
@@ -90,92 +98,3 @@ t_node *pop_a_top(t_stack *st)
     return n;
 }
 
-void push_a_bot(t_stack *st, t_node *n)
-{
-    t_node *tail = st->a;
-    if (!st || !n)
-        return;
-    if (st->a_size++ == 0)
-    {
-        st->a = n;
-    }
-    else
-    {
-        while (tail->next)
-            tail = tail->next;
-        tail->next = n;
-        n->prev = tail;
-    }
-}
-
-t_node *pop_a_bot(t_stack *st)
-{
-    t_node *tail, *prev;
-    if (!st || st->a_size < 1)
-        return NULL;
-    tail = st->a;
-    while (tail->next)
-        tail = tail->next;
-    prev = tail->prev;
-    if (prev)
-        prev->next = NULL;
-    else
-        st->a = NULL;
-    st->a_size--;
-    tail->prev = NULL;
-    return tail;
-}
-
-/*–– Push/Pop at top/bottom of Stack B ––*/
-void push_b_top(t_stack *st, t_node *n)
-{
-    if (st->b_size++ == 0)
-        st->b = n;
-    else
-    {
-        n->next = st->b;
-        st->b->prev = n;
-        st->b = n;
-    }
-}
-t_node *pop_b_top(t_stack *st)
-{
-    t_node *n = st->b;
-    if (!n)
-        return NULL;
-    st->b = n->next;
-    if (st->b)
-        st->b->prev = NULL;
-    n->next = NULL;
-    st->b_size--;
-    return n;
-}
-void push_b_bot(t_stack *st, t_node *n)
-{
-    t_node *t = st->b;
-    if (st->b_size++ == 0)
-        st->b = n;
-    else
-    {
-        while (t->next)
-            t = t->next;
-        t->next = n;
-        n->prev = t;
-    }
-}
-t_node *pop_b_bot(t_stack *st)
-{
-    t_node *t = st->b, *p;
-    if (!t)
-        return NULL;
-    while (t->next)
-        t = t->next;
-    p = t->prev;
-    if (p)
-        p->next = NULL;
-    else
-        st->b = NULL;
-    st->b_size--;
-    t->prev = NULL;
-    return t;
-}

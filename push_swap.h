@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 14:39:23 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/16 12:18:27 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/16 14:50:02 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <limits.h>
 # include <stdbool.h>
 # include "./libft/libft.h"
-# include "./ft_printf/ft_printf.h"
 
 /* ============================================================================
  * Structures
@@ -99,6 +98,7 @@ void sort_radix(t_stack *st);
  * parsing.c
  * ============================================================================
  */
+void gauntlet(int argc, char **argv, t_stack *st);
 bool	parse_args(int argc, char **argv, t_stack *st);
 void assign_indexes(t_stack *st);
 
@@ -106,6 +106,7 @@ void assign_indexes(t_stack *st);
  * small_sorts.c
  * ============================================================================
  */
+
 void	sort_two(t_stack *st);
 void	sort_three(t_stack *st);
 int		find_min_position(t_node *a);
