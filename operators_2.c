@@ -12,41 +12,53 @@
 
 #include "push_swap.h"
 
-void pb(t_stack *st)
+void	pb(t_stack *st)
 {
-    t_node *n = pop_a_top(st);
-    if (!n) return;
-    push_b_top(st, n);
-    write(1, "pb\n", 3);
+	t_node	*n;
+
+	n = pop_a_top(st);
+	if (!n)
+		return ;
+	push_b_top(st, n);
+	write(1, "pb\n", 3);
 }
 
-void ra(t_stack *st)
+void	ra(t_stack *st)
 {
-    t_node *n = pop_a_top(st);
-    if (!n) return;
-    push_a_bot(st, n);
-    write(1, "ra\n", 3);
+	t_node	*n;
+
+	n = pop_a_top(st);
+	if (!n)
+		return ;
+	push_a_bot(st, n);
+	write(1, "ra\n", 3);
 }
 
-void rb(t_stack *st)
+void	rb(t_stack *st)
 {
-    t_node *n = pop_b_top(st);
-    if (!n) return;
-    push_b_bot(st, n);
-    write(1, "rb\n", 3);
+	t_node	*n;
+
+	n = pop_b_top(st);
+	if (!n)
+		return ;
+	push_b_bot(st, n);
+	write(1, "rb\n", 3);
 }
 
-void rr(t_stack *st)
+void	rr(t_stack *st)
 {
-    ra(st);
-    rb(st);
-    write(1, "rr\n", 3);
+	ra(st);
+	rb(st);
+	write(1, "rr\n", 3);
 }
 
-void rra(t_stack *st)
+void	rra(t_stack *st)
 {
-    t_node *n = pop_a_bot(st);
-    if (!n) return;
-    push_a_top(st, n);
-    write(1, "rra\n", 4);
+	t_node	*n;
+
+	n = pop_a_bot(st);
+	if (!n)
+		return ;
+	push_a_top(st, n);
+	write(1, "rra\n", 4);
 }

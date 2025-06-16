@@ -12,17 +12,20 @@
 
 #include "push_swap.h"
 
-void rrb(t_stack *st)
+void	rrb(t_stack *st)
 {
-    t_node *n = pop_b_bot(st);
-    if (!n) return;
-    push_b_top(st, n);
-    write(1, "rrb\n", 4);
+	t_node	*n;
+
+	n = pop_b_bot(st);
+	if (!n)
+		return ;
+	push_b_top(st, n);
+	write(1, "rrb\n", 4);
 }
 
-void rrr(t_stack *st)
+void	rrr(t_stack *st)
 {
-    rra(st);
-    rrb(st);
-    write(1, "rrr\n", 4);
+	rra(st);
+	rrb(st);
+	write(1, "rrr\n", 4);
 }
