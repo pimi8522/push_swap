@@ -6,7 +6,7 @@
 /*   By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 10:45:55 by miduarte          #+#    #+#             */
-/*   Updated: 2025/06/09 12:16:13 by miduarte         ###   ########.fr       */
+/*   Updated: 2025/06/16 10:48:14 by miduarte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ int main(int argc, char **argv)
     else if (size == 5)
         sort_five(st);
     else if (size > 5)
-        sort_big(st);
+        //sort_bff(st);
+        sort_radix(st);
 
     free_stacks(st);
     return (0);
