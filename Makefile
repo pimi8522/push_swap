@@ -6,7 +6,7 @@
 #    By: miduarte <miduarte@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/02 14:34:23 by miduarte          #+#    #+#              #
-#    Updated: 2025/06/12 15:07:11 by miduarte         ###   ########.fr        #
+#    Updated: 2025/06/16 11:11:40 by miduarte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ NAME = push_swap
 CC      = gcc
 CFLAGS  = -Wall -Wextra -Werror
 
-SRCS = main.c struct_utils.c small_sorts.c best_friend.c parsing.c operators.c
+SRCS = main.c struct_utils.c small_sorts.c best_friend.c parsing.c operators.c radix_sort.c
 OBJS = $(SRCS:.c=.o)
 
 LIBFT_DIR = ./libft
